@@ -3,12 +3,10 @@ body {
     margin: 0;
   }
   
-  #map,
-  body,
-  html {
-    height: 100%;
-  }
-  
-  .leaflet-popup-content {
-    text-align: center;
+  #map {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 400px;  /* or as desired */
+    width: 100%;  /* This means "100% of the width of its container", the .col-md-8 */
   }
