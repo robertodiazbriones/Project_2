@@ -24,9 +24,9 @@ var streetmap = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 controlLayers.addBaseLayer(streetmap, 'OpenStreetMap');
 
 // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
-
+var link = "https://school-data-server.herokuapp.com/api";
 // Read markers data from cleaned_data.csv
-d3.csv('Data/cleaned_data.csv', function(data) {
+d3.json(link, function(data) {
     function chooseColor(data) {
         return data > 66 ? 'red' :
             data < 33 ? 'green' :
