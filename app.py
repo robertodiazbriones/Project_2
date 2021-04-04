@@ -2,6 +2,7 @@
 from flask import Flask, render_template, redirect, jsonify
 import pandas as pd
 import numpy as np
+app = Flask(__name__)
 
 #read in .csv data
 prune_df = pd.read_csv('district_data_full_clean.csv')
