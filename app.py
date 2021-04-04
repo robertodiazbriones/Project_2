@@ -64,7 +64,7 @@ for d in range(len(district)):
 dist_data_dict = {'district_data': dist_data}
 #do a similar process for the school data
 
-school_df = pd.read_csv('School_data.csv')  
+school_df = pd.read_csv('cleaned_school_data.csv')  
 
 #convert columns to numpy arrays for speed and ease of iteration
 school = school_df['school'].to_numpy()
@@ -77,7 +77,7 @@ prcnt_hisp = school_df['percent_hispanic'].to_numpy()
 prcnt_bk = school_df['percent_black'].to_numpy()
 prcnt_asn = school_df['percent_asian'].to_numpy()
 prcnt_othr = school_df['percent_other'].to_numpy()
-s_prcnt_stdnts_eligible_for_frl  = school_df['percent_student_body_eligible_for_frl'].to_numpy()
+s_prcnt_stdnts_eligible_for_frl  = school_df['eligible_for_frl'].to_numpy()
 s_majority_minority = school_df['majority_minority'].to_numpy()
 
 #variable for school data list
