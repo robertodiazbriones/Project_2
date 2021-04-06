@@ -2,7 +2,6 @@
 from flask import Flask, render_template, redirect, jsonify
 import pandas as pd
 import numpy as np
-app = Flask(__name__)
 
 #read in .csv data
 prune_df = pd.read_csv('district_data_full_clean.csv')
@@ -29,7 +28,6 @@ ave_prcnt_othr = prune_df['ave_prcnt_othr'].to_numpy()
 prcnt_stdnts_eligible_for_frl  = prune_df['percent_student_body_eligible_for_frl'].to_numpy()
 majority_minority = prune_df['majority_minority'].to_numpy()
 
-
 #define an empty list for 
 dist_data = []
 
@@ -41,6 +39,7 @@ for d in range(len(district)):
     
     #add all the things
     entry.update({'district': district[d]})
+    entry.update({'index': int(d)})
     entry.update({'lat': lat[d]})
     entry.update({'lng': lng[d]})
     entry.update({'tot_rev_per_s': tot_rev_per_s[d]})
@@ -65,7 +64,7 @@ for d in range(len(district)):
 dist_data_dict = {'district_data': dist_data}
 #do a similar process for the school data
 
-school_df = pd.read_csv('cleaned_school_data.csv')  
+school_df = pd.read_csv('School_data.csv')  
 
 #convert columns to numpy arrays for speed and ease of iteration
 school = school_df['school'].to_numpy()
@@ -78,7 +77,7 @@ prcnt_hisp = school_df['percent_hispanic'].to_numpy()
 prcnt_bk = school_df['percent_black'].to_numpy()
 prcnt_asn = school_df['percent_asian'].to_numpy()
 prcnt_othr = school_df['percent_other'].to_numpy()
-s_prcnt_stdnts_eligible_for_frl  = school_df['eligible_for_frl'].to_numpy()
+s_prcnt_stdnts_eligible_for_frl  = school_df['percent_student_body_eligible_for_frl'].to_numpy()
 s_majority_minority = school_df['majority_minority'].to_numpy()
 
 #variable for school data list
@@ -91,6 +90,7 @@ for s in range(len(school)):
     oed = {}
     oed.update({'school': school[s]})
     oed.update({'district' : s_district[s]})
+    oed.update({'index': int(s)})
     oed.update({'lat': s_lat[s]})
     oed.update({'lng' : s_lng[s]})
     oed.update({'enrollment' : int(enrollment[s])})
@@ -113,7 +113,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return('School data at /school_api, district data at /api')
+    return(render_template('index.html'))
 
 @app.route("/api", methods=["GET"])
 def api():
