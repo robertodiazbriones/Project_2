@@ -25,6 +25,7 @@
 </head>
 
 <body>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
@@ -37,10 +38,22 @@
       <p>The database includes all public schools buildings or programs with at least 25 students, including charter schools. It does not include private schools, which do not report those numbers to the state.</p>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
         <!-- The div that holds our map -->
         <div id="map"></div>
       </div>
+      <div class="col-md-6">
+        <div class="select_dist">
+          <select id="selDataset" onchange="optionChanged(this.value)">
+            <option value="none" selected disabled hidden>--Select a School District--</option>
+          </select>
+        </div>
+        <div id="demo-piechart"></div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <!-- EMpty -->
     </div>
   </div>
   
