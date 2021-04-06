@@ -1,0 +1,45 @@
+DROP TABLE locations;
+CREATE TABLE locations (
+	School VARCHAR,
+	District VARCHAR,
+	Address VARCHAR,
+	Lat VARCHAR,
+	Lng VARCHAR
+);
+DROP TABLE census;
+CREATE TABLE census (
+	School VARCHAR,
+	District VARCHAR,
+	Enrollment INT,
+	Percent_White INT,
+	Percent_Black INT,
+	Percent_Hispanic INT,
+	Percent_Asian INT,
+	Percent_Other INT
+);
+
+DROP TABLE frl_counts;
+CREATE TABLE frl_counts (
+	District_Code INT,
+	District_Name VARCHAR,
+	Building_Code INT,
+	School_Name VARCHAR,
+	Free_Lunch_Eligible INT,
+	Reduced_Price_Lunch_Eligible INT,
+	Not_Eligible INT,
+	Total_Count INT,
+	Percent_Student_Body_Eligible_for_FRL INT
+);
+
+SELECT * FROM locations;
+
+SELECT * FROM census;
+
+SELECT * FROM frl_counts;
+
+SELECT locations.school, locations.district, locations.address, locations.lat, locations.lng, census.enrollment, census.percent_white, census.percent_black, census.percent_hispanic, census.percent_asian, census.percent_other, frl_counts.free_lunch_eligible, frl_counts.reduced_price_lunch_eligible, frl_counts.not_eligible, frl_counts.total_count, frl_counts.percent_student_body_eligible_for_frl 
+FROM locations
+INNER JOIN census
+ON census.school=locations.school
+INNER JOIN frl_counts
+ON frl_counts.school_name=locations.school;
