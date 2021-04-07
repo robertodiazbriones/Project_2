@@ -27,7 +27,7 @@ The finished product can be found at this address: https://robertodiazbriones.gi
  app.py - This is the flask app. It reads in two .csv files (School_data.csv and district_data_full_clean.csv) converts them to JSON format and serves them
  at two different URLs.
  
- Templates - This folder containst the HTML and CSS code for the frontend of the app. 
+ Templates - This folder containst the HTML and CSS code for the front end of the app. 
  
  index.html - This is the HTML file that controls the appearance of the UI for the flask app. 
  
