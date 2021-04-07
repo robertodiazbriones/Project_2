@@ -9,6 +9,7 @@ The finished product can be found at this address: https://robertodiazbriones.gi
  data, and the flask app used to serve the data out in JSON form. 
  
  Files and Folders:
+ 
  Data - This is the folder that contains all the data we ended up using in the project and our cleaning and exploration operations. The folder contains three .csv
  datafiles and a folder called 'cleaning'.
  
