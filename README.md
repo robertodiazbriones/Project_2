@@ -5,6 +5,8 @@ show the degree to which our school system is racially segregated. Our project c
 serves the data we collected and processed in the early stages of the project, into three dashboard pages that allow the data to be interactively visualized.
 The finished product can be found at this address: https://robertodiazbriones.github.io/Proj2_dashboard/. 
 
+  If you want to inspect the dashboard code, you can find it at the following github repo: https://github.com/robertodiazbriones/Proj2_dashboard.
+
   The present repository contains mostly the code from the earlier stages of the project - the original data, the jupyter notebooks used to clean and manipulate the
  data, and the flask app used to serve the data out in JSON form. 
  
@@ -24,7 +26,7 @@ The finished product can be found at this address: https://robertodiazbriones.gi
  merged. This notebook also contains some statistical analysis and exploration. 
  
  Flask - This folder is home to a copy of the git repository used to host the finished version of the flask app. The app itself is hosted on Heroku:
-https://school-data-server.herokuapp.com/
+https://school-data-server.herokuapp.com/.
  
  app.py - This is the flask app. It reads in two .csv files (School_data.csv and district_data_full_clean.csv) converts them to JSON format and serves them
  at two different URLs.
