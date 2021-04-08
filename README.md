@@ -23,7 +23,8 @@ The finished product can be found at this address: https://robertodiazbriones.gi
  on school districts. The two sets were merged by grouping the school data by district. The district names were manually adjusted in Excel to allow the files to be 
  merged. This notebook also contains some statistical analysis and exploration. 
  
- Flask - This folder is home to a copy of the git repository used to host the finished version of the flask app. 
+ Flask - This folder is home to a copy of the git repository used to host the finished version of the flask app. The app itself is hosted on Heroku:
+https://school-data-server.herokuapp.com/
  
  app.py - This is the flask app. It reads in two .csv files (School_data.csv and district_data_full_clean.csv) converts them to JSON format and serves them
  at two different URLs.
