@@ -2,7 +2,7 @@
 
   Welcome to Segregation in MI Public Schools. The goal of this project was to take demographic and resource data on Michigan Schools and use it in interactives that 
 show the degree to which our school system is racially segregated. Our project contains several components. The end product was a website that contains an api, which 
-serves the data we collected and processed in the early stages of the project into three dashboard pages that allow the data to be interactively visualized.
+serves the data we collected and processed in the early stages of the project, into three dashboard pages that allow the data to be interactively visualized.
 The finished product can be found at this address: https://robertodiazbriones.github.io/Proj2_dashboard/. 
 
   The present repository contains mostly the code from the earlier stages of the project - the original data, the jupyter notebooks used to clean and manipulate the
