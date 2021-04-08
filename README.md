@@ -1,4 +1,4 @@
-# Segregation in MI Public Schools
+# Segregation in MI Public Schools Data Workup and Server
 
   Welcome to Segregation in MI Public Schools. The goal of this project was to take demographic and resource data on Michigan Schools and use it in interactives that 
 show the degree to which our school system is racially segregated. Our project contains several components. The end product was a website that contains an api, which 
